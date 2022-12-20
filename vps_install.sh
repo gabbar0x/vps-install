@@ -116,7 +116,8 @@ rm -rf /root/Gf-Patterns;
 wget https://raw.githubusercontent.com/devanshbatham/ParamSpider/master/gf_profiles/potential.json;
 mv /root/potential.json /root/.gf/;
 go install -v github.com/OWASP/Amass/v3/...@master ;
-go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest;
+go install github.com/d3mondev/puredns/v2@latest;
 
 echo 'source /usr/local/go/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc;
 echo "
