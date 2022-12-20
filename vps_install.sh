@@ -4,6 +4,7 @@ systemctl enable ssh;
 systemctl start ssh;
 service ssh start;
 apt-get install gpg-agent;
+apt-get install curl ;
 #echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list;
 #gpg --keyserver hkp://keys.gnupg.net --recv-key 7D8D0BF6;
 #gpg --fingerprint 7D8D0BF6;
@@ -49,7 +50,7 @@ go get -u github.com/rverton/webanalyze;
 pip install requests;
 go get -u github.com/c-bata/go-prompt;
 go get github.com/hahwul/websocket-connection-smuggler;
-go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latestGO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei;
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 git clone https://github.com/projectdiscovery/nuclei-templates $dir/nuclei-templates;
 go get github.com/haccer/subjack;
 go get github.com/eth0izzle/shhgit;
@@ -114,6 +115,8 @@ mv /root/Gf-Patterns/*.json /root/.gf/;
 rm -rf /root/Gf-Patterns;
 wget https://raw.githubusercontent.com/devanshbatham/ParamSpider/master/gf_profiles/potential.json;
 mv /root/potential.json /root/.gf/;
+go install -v github.com/OWASP/Amass/v3/...@master ;
+
 echo 'source /usr/local/go/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc;
 echo "
 alias osmedeus='python3 /root/Tools/Osmedeus/osmedeus.py -m "subdomain,portscan,vuln,git,burp,ip" -t'
@@ -148,6 +151,13 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 " >> /root/.bashrc;
 cd;
+mkdir /opt/wordlists;
+git clone https://github.com/danielmiessler/SecLists.git;
+mv SecLists /opt/wordlists/ ;
+cd /opt/wordlists ;
+wget -r --no-parent -R "index.html*" https://wordlists-cdn.assetnote.io/data/ -nH ;
+git clone https://github.com/six2dez/OneListForAll.git ;
+
 git clone https://github.com/harsh-bothra/Bheem.git;
 mv /root/Bheem/arsenal /root/;
 chmod +x /root/arsenal/*;
