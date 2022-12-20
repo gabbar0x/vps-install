@@ -158,6 +158,7 @@ cd /opt/wordlists ;
 wget -r --no-parent -R "index.html*" https://wordlists-cdn.assetnote.io/data/ -nH ;
 git clone https://github.com/six2dez/OneListForAll.git ;
 
+cd ;
 git clone https://github.com/harsh-bothra/Bheem.git;
 mv /root/Bheem/arsenal /root/;
 chmod +x /root/arsenal/*;
