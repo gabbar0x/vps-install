@@ -153,13 +153,17 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 " >> /root/.bashrc;
 cd;
+pip3 install arjun
 mkdir /opt/wordlists;
 git clone https://github.com/danielmiessler/SecLists.git;
 mv SecLists /opt/wordlists/ ;
 cd /opt/wordlists ;
 wget -r --no-parent -R "index.html*" https://wordlists-cdn.assetnote.io/data/ -nH ;
 git clone https://github.com/six2dez/OneListForAll.git ;
-
+mkdir dns;cd dns;wget https://gist.githubusercontent.com/jhaddix/86a06c5dc309d08580a018c66354a056/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt;cd ../
+mkdir resolver;
+cd resolver;
+wget https://raw.githubusercontent.com/six2dez/resolvers_reconftw/main/resolvers.txt ;
 cd ;
 git clone https://github.com/harsh-bothra/Bheem.git;
 mv /root/Bheem/arsenal /root/;
