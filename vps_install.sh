@@ -14,12 +14,19 @@ apt update;
 apt-get -y update;
 #apt-get -y install kali-linux-everything;
 apt-get update && apt-get upgrade;
-wget https://dl.google.com/go/go1.19.3.linux-amd64.tar.gz;
-sudo tar -xvf go1.19.3.linux-amd64.tar.gz;
-sudo mv go /usr/local;
-export GOROOT=/usr/local/go;
-export GOPATH=$HOME/go;
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH;
+
+#install go;
+version=$(curl -L -s https://golang.org/VERSION?m=text)
+                eval wget "https://dl.google.com/go/${version}.linux-amd64.tar.gz" $DEBUG_STD
+                eval $SUDO tar -C /usr/local -xzf "${version}.linux-amd64.tar.gz" $DEBUG_STD
+                eval $SUDO ln -sf /usr/local/go/bin/go /usr/local/bin/ ;
+                #rm -rf $version*
+                export GOROOT=/usr/local/go;
+                export GOPATH=$HOME/go;
+                export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH;
+                echo "installed go $version"
+                
+                
 sudo apt-get install python3;
 sudo apt-get install python3-pip;
 sudo apt-get install ruby;
