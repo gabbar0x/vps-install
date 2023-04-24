@@ -28,57 +28,55 @@ version=$(curl -L -s https://golang.org/VERSION?m=text)
                 
                 
 sudo apt-get install python3;
+#comment the bashrc if they is error while runnig...
+source ~/.bashrc; 
 sudo apt-get install python3-pip;
 sudo apt-get install ruby;
 sudo apt-get install screen;
 sudo apt-get install git;
+go install github.com/projectdiscovery/pdtm/cmd/pdtm@latest;
+pdtm -install-all;
 mkdir /root/.gf
 mkdir /root/Tools;
 mkdir /root/Recon;
 dir=/root/Tools;
-go get -u github.com/m4ll0k/Aron;
-go get github.com/Ice3man543/SubOver;
+go install github.com/m4ll0k/Aron@latest;
+go installgithub.com/Ice3man543/SubOver;
 git clone https://github.com/tomnomnom/hacks $dir/hacks;
 git clone https://github.com/tomnomnom/gf $dir/gf;
 git clone https://github.com/zdresearch/OWASP-Nettacker $dir/OWASP-Nettacker;
-go get -u github.com/tomnomnom/assetfinder;
-go get -u github.com/tomnomnom/fff;
-go get github.com/tomnomnom/hacks/filter-resolved;
-go get -u github.com/tomnomnom/hacks/gittrees;
-go get github.com/tomnomnom/hacks/waybackurls;
-go get -u github.com/tomnomnom/hacks/unisub;
-go get -u -v github.com/lukasikic/subzy;
-go install -v github.com/lukasikic/subzy;
-go get -u github.com/tomnomnom/unfurl;
-go get github.com/tomnomnom/burl;
-go get -u github.com/tomnomnom/meg;
-go get -u github.com/j3ssie/metabigor;
-go get -u github.com/rverton/webanalyze;
+go install github.com/tomnomnom/assetfinder@latest;
+go install github.com/tomnomnom/fff@latest;
+go installgithub.com/tomnomnom/hacks/filter-resolved@latest;
+go install github.com/tomnomnom/hacks/gittrees;
+go installgithub.com/tomnomnom/hacks/waybackurls@latest;
+go install github.com/tomnomnom/hacks/unisub@latest;
+go install github.com/lukasikic/subzy@latest;
+go install github.com/lukasikic/subzy;
+go install github.com/tomnomnom/unfurl@latest;
+go installgithub.com/tomnomnom/burl@latest;
+go install github.com/tomnomnom/meg@latest;
+go install github.com/j3ssie/metabigor@latest;
+go install github.com/rverton/webanalyze@latest;
 pip install requests;
-go get -u github.com/c-bata/go-prompt;
-go get github.com/hahwul/websocket-connection-smuggler;
-go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-git clone https://github.com/projectdiscovery/nuclei-templates $dir/nuclei-templates;
-go get github.com/haccer/subjack;
-go get github.com/eth0izzle/shhgit;
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latestGO111MODULE=on go get -v github.com/projectdiscovery/subfinder/cmd/subfinder;
-go get github.com/tiagorlampert/CHAOS;
-go install -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
+go install github.com/c-bata/go-prompt@latest;
+go installgithub.com/hahwul/websocket-connection-smuggler@latest;
+go installgithub.com/haccer/subjack@latest;
+go installgithub.com/eth0izzle/shhgit@latest;
 go install github.com/hahwul/dalfox/v2@latest
-go get github.com/ffuf/ffuf;
+go installgithub.com/ffuf/ffuf@latest;
 go install github.com/lc/gau/v2/cmd/gau@latest
-go get -u github.com/tomnomnom/gf;
+go install github.com/tomnomnom/gf@latest;
 cp -r /usr/local/go/src/github.com/tomnomnom/gf/examples ~/.gf/;
-go get github.com/003random/getJS;
-go get github.com/subfinder/goaltdns;
-go get github.com/OJ/gobuster;
+go installgithub.com/003random/getJS@latest;
+go installgithub.com/subfinder/goaltdn@latests;
+go installgithub.com/OJ/gobuster@latest;
 go install github.com/sensepost/gowitness@latest
-go get -u github.com/jaeles-project/gospider;
-go get github.com/hakluke/hakcheckurl;
-go get github.com/hakluke/hakrawler;
-go get github.com/hakluke/hakrevdns;
-go get -u github.com/tomnomnom/httprobe;
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install github.com/jaeles-project/gospide@latestr;
+go installgithub.com/hakluke/hakcheckurl@latest;
+go installgithub.com/hakluke/hakrawler@latest;
+go installgithub.com/hakluke/hakrevdns@latest;
+go install github.com/tomnomnom/httprobe@latest;
 git clone https://github.com/udit-thakkur/AdvancedKeyHacks $dir/AdvancedKeyHacks;
 git clone https://github.com/streaak/keyhacks $dir/keyhacks;
 git clone https://github.com/s0md3v/Arjun $dir/Arjun;
@@ -101,14 +99,12 @@ git clone https://github.com/j3ssie/Osmedeus $dir/Osmedeus;
 git clone https://github.com/codingo/NoSQLMap $dir/NoSQLMap;
 git clone https://github.com/nsonaniya2010/SubDomainizer $dir/SubDomainizer;
 git clone https://github.com/s0md3v/XSStrike $dir/XSStrike;
-GO111MODULE=on go get -u -v github.com/projectdiscovery/dnsprobe;
 git clone https://github.com/maurosoria/dirsearch $dir/dirsearch;
 git clone https://github.com/dwisiswant0/apkleaks $dir/apkleaks;
 git clone https://github.com/ozguralp/gmapsapiscanner $dir/gmapsapiscanner;
 git clone https://github.com/defparam/smuggler $dir/smuggler;
 git clone https://github.com/epsylon/Smuggler $dir/epsylon_Smuggler;
 git clone https://github.com/kowainik/smuggler $dir/kowa_smuggler;
-go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest
 git clone https://github.com/p4pentest/crtsh $dir/crtsh;
 git clone https://github.com/XecLabs/Theif $dir/Theif;
 git clone https://github.com/YashGoti/crtsh.py $dir/crtsh.py;
@@ -122,8 +118,7 @@ mv /root/Gf-Patterns/*.json /root/.gf/;
 rm -rf /root/Gf-Patterns;
 wget https://raw.githubusercontent.com/devanshbatham/ParamSpider/master/gf_profiles/potential.json;
 mv /root/potential.json /root/.gf/;
-go install -v github.com/OWASP/Amass/v3/...@master ;
-go install -v github.com/projectdiscovery/notify/cmd/notify@latest;
+go install github.com/OWASP/Amass/v3/...@master ;
 go install github.com/d3mondev/puredns/v2@latest;
 
 echo 'source /usr/local/go/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc;
@@ -163,6 +158,7 @@ cd;
 pip3 install arjun
 mkdir /opt/wordlists;
 git clone https://github.com/danielmiessler/SecLists.git;
+#install only on large storge vps
 mv SecLists /opt/wordlists/ ;
 cd /opt/wordlists ;
 wget -r --no-parent -R "index.html*" https://wordlists-cdn.assetnote.io/data/ -nH ;
